@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import ShortenedForm from "./shortenedForm";
 import ShortenedLinks from "./shortenedLinks";
 
 const MainSection = () => {
+  const usefulLinks = JSON.parse(localStorage.getItem("allLinks")) || []
+  const [shortTheLink, setShortTheLink] = useState(usefulLinks)
   return (
     <>
       <section id="advancedStat">
-        <ShortenedForm />
-        <ShortenedLinks />
+        <ShortenedForm setShortTheLink={setShortTheLink} shortTheLink={shortTheLink}/>
+        <ShortenedLinks shortTheLink={shortTheLink}/>
         
         <div id="advancedHeader">
           <h1 id="adHead">Advanced Statistics</h1>

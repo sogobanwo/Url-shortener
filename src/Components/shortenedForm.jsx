@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import { validation } from "../Helpers/validationSchema";
 import { shorten } from "../Helpers/services";
 
-const ShortenedForm = () => {
+const ShortenedForm = ({setShortTheLink, shortTheLink}) => {
   return (
     <>
       <section id="searchSection">
@@ -20,9 +20,9 @@ const ShortenedForm = () => {
                 originalLink: original_link,
                 shortenedLink: short_link2
               }
-              const links = JSON.parse(localStorage.getItem("allLinks")) || [];
-              links.push(neededValues)
-              localStorage.setItem("allLinks", JSON.stringify(links))
+              shortTheLink.push(neededValues)
+              localStorage.setItem("allLinks", JSON.stringify(shortTheLink))
+              setShortTheLink(JSON.parse(localStorage.getItem("allLinks")))
               setSubmitting(false);
             }}
           >

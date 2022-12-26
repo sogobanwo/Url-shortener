@@ -1,13 +1,17 @@
 import Navbar from "./Components/Navbar";
-import Body from "./Components/Body";
 import Footer from "./Components/Footer";
 import "./Stylesheets/Desktop.css"
+import HeroSection from "./Components/heroSection";
+import MainSection from "./Components/mainSection";
+import BoostSection from "./Components/boostSection";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Body />
+      <HeroSection />
+      <MainSection />
+      <BoostSection />
       <Footer />
     </>
   );

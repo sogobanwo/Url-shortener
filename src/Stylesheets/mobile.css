@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+
+
+@media (max-width:768px) {
+  *{
+    font-size: 9px;
+  }
+
+  /* Nav Styling */
+
+
+  /* Hero styling */
+  #heroSection{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20%;
+  }
+  #moveRight{
+    width: 100%;
+    margin-left: -0%;
+    margin-right: 0;
+    margin-bottom: 10%;
+  }
+  #leftHero{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Seacrh section */
+#searchSection{
+  background-image: url("../Resources/bg-shorten-mobile.svg");
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#shortener{
+  width: 80%;
+  margin: 0;
+}
+
+#shorten{
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+#shortenButton{
+  width: 100%;
+  height: 3rem;
+  border-radius: 5px;
+}
+
+#totalCard{
+  display: flex;
+  flex-direction: column;
+}
+
+.eachCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.adIcons{
+  width: 60px;
+  height: 60px;
+  margin-top: -4rem;
+}
+
+.adSubHead{
+  font-size: 1.7rem;
+  margin-bottom: 0;
+}
+
+#adSubParagraph{
+  font-size: 1.5rem;
+  margin: 1.8rem;
+}
+
+/* Boost Section */
+
+#boostSection{
+  background-image: url("../Resources/bg-boost-mobile.svg");
+  height: 20rem;
+}
+
+/* Footer Section */
+#footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  padding: 5% 0;
+  width: 100%;
+}
+
+#footerRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footerCenter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#footerLinksContainer{
+  margin-right: 0;
+}
+.footLinkHeader{
+  margin-top:2.5rem;
+}
+
+.footerRightIcons{
+  margin: 1rem 2rem;
+}
+
+}

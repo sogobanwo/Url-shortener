@@ -181,6 +181,12 @@
   padding:1% 2%;
 }
 
+form{
+  color: orangered;
+  font-style: italic;
+  outline-color: orangered;
+}
+
 #rightLink{
   display: flex;
   justify-content: space-evenly;
@@ -295,7 +301,7 @@
 }
 
 #adSubParagraph{
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.8rem;
   color: hsl(257, 7%, 63%);
 }
 

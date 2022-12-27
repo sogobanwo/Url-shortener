@@ -1,24 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import "../Stylesheets/Desktop.css";
 
 const Navbar = () => {
-  // Get the side navigation
-var sideNav = document.getElementById("side-nav");
-
-// When the user clicks on the button, open the navigation
- function sogo() {
-  if (sideNav.style.width === "0px") {
-    sideNav.style.width = "250px";
-  } else {
-    sideNav.style.width = "0";
-  }
-};
-
-// Close the navigation when the user clicks on the "x" button
-function closeNav() {
-  sideNav.style.width = "0";
-}
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav id="navbar">
@@ -40,16 +25,24 @@ function closeNav() {
         <p id="SignUp">Sign Up</p>
       </div>
 
-      <button id="hamburger" onClick={sogo}>
+      {/* Mobile view */}
+      <button id="hamburger" onClick={() => setIsMenuOpen(true)}>
         <FaBars style={{ color: "hsl(255, 11%, 22%)", fontSize: "4rem" }} />
       </button>
-      <ul id="side-nav">
-        <li className="navList">Features</li>
-        <li className="navList">Pricing</li>
-        <li className="navList">Resources</li>
-        <li id="login">Login</li>
-        <li id="SignUp">Sign Up</li>
-      </ul>
+      {isMenuOpen && (
+        <nav id="side-nav">
+          <ul>
+            <li className="navList">Features</li>
+            <li className="navList">Pricing</li>
+            <li className="navList">Resources</li>
+            <li className="navList">Login</li>
+            <li className="navList">Sign Up</li>
+          </ul>
+          <button className="closebtn" onClick={() => setIsMenuOpen(false)}>
+            x
+          </button>
+        </nav>
+      )}
     </nav>
   );
 };

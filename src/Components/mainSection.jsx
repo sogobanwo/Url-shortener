@@ -9,7 +9,7 @@ const MainSection = () => {
     <>
       <section id="advancedStat">
         <ShortenedForm setShortTheLink={setShortTheLink} shortTheLink={shortTheLink}/>
-        <ShortenedLinks shortTheLink={shortTheLink}/>
+        <ShortenedLinks shortTheLink={shortTheLink} setShortTheLink={setShortTheLink} />
         
         <div id="advancedHeader">
           <h1 id="adHead">Advanced Statistics</h1>

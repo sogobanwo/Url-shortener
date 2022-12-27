@@ -1,6 +1,25 @@
 import React from "react";
+import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
+  // Get the side navigation
+var sideNav = document.getElementById("side-nav");
+
+// When the user clicks on the button, open the navigation
+ function sogo() {
+  if (sideNav.style.width === "0px") {
+    sideNav.style.width = "250px";
+  } else {
+    sideNav.style.width = "0";
+  }
+};
+
+// Close the navigation when the user clicks on the "x" button
+function closeNav() {
+  sideNav.style.width = "0";
+}
+
+
   return (
     <nav id="navbar">
       <div id="leftNav">
@@ -20,6 +39,17 @@ const Navbar = () => {
         <p id="login">Login</p>
         <p id="SignUp">Sign Up</p>
       </div>
+
+      <button id="hamburger" onClick={sogo}>
+        <FaBars style={{ color: "hsl(255, 11%, 22%)", fontSize: "4rem" }} />
+      </button>
+      <ul id="side-nav">
+        <li className="navList">Features</li>
+        <li className="navList">Pricing</li>
+        <li className="navList">Resources</li>
+        <li id="login">Login</li>
+        <li id="SignUp">Sign Up</li>
+      </ul>
     </nav>
   );
 };

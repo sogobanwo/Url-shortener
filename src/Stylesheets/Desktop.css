@@ -18,6 +18,12 @@
   margin-left: 5%;
   width: 90%;
 }
+
+#hamburger{
+  border: none;
+  background-color: #ffffff;
+}
+
 #leftNav{
   display: flex;
   justify-content: space-evenly;
